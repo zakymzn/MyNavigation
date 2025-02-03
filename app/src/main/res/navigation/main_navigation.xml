@@ -29,10 +29,20 @@
     <activity
         android:id="@+id/profileActivity"
         android:name="com.example.mynavigation.ProfileActivity"
-        android:label="ProfileActivity" />
+        android:label="ProfileActivity"
+        tools:layout="@layout/activity_profile"/>
     <fragment
         android:id="@+id/detailCategoryFragment"
         android:name="com.example.mynavigation.DetailCategoryFragment"
         android:label="fragment_detail_category"
-        tools:layout="@layout/fragment_detail_category" />
+        tools:layout="@layout/fragment_detail_category" >
+        <argument
+            android:name="name"
+            app:argType="string"
+            android:defaultValue="default name" />
+        <argument
+            android:name="stock"
+            app:argType="long"
+            android:defaultValue="0L" />
+    </fragment>
 </navigation>
